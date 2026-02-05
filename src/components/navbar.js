@@ -4,7 +4,7 @@ import yukti from "../assets/InShot_20260204_143344831.png";
 
 const Navbar = () => {
   return (
-    <div className="flex justify-center items-center bg-gray-900 w-[100%] lg:text-base sm:text-xs p-4">
+    <div className="flex justify-center items-center bg-gray-900 w-[100%] lg:text-base sm:text-sm p-4">
       <div className="flex flex-row justify-between items-center lg:w-11/12 p-4 sm:flex sm:w-11/12 sm:justify-between sm:items-center">
         <img src={yukti} alt="yukti" width={120} />
         <nav className="space-x-8">

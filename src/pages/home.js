@@ -9,17 +9,17 @@ import code from "../assets/WhatsApp Image 2026-02-03 at 18.02.18.jpeg";
 
 const Home = () => {
   return (
-    <div className="flex flex-col items-center justify-center bg-black w-[100%] lg:text-base sm:text-xs gap-4">
+    <div className="flex flex-col items-center justify-center bg-black w-[100%] lg:text-base sm:text-sm gap-4">
       <div className="flex flex-row items-center justify-center gap-6 mt-10">
-        <img src={logo} alt="BBS College" width={800} />
+        <img src={logo} alt="BBS College" width={400} />
       </div>
-      <div className="flex items-center justify-center h-[50vh]">
+      <div className="flex items-center justify-center">
         <img
           src={tech1}
           alt="tech"
-          className="flex h-[50vh] right-96 sm:w-80 sm:h-auto"
+          className="flex right-96 sm:w-80 sm:h-auto"
         />
-        <div className="flex flex-col justify-center items-center h-[50vh] gap-2">
+        <div className="flex flex-col justify-center items-center gap-2">
           <h1 className="flex lg:flex-row sm:flex-col sm:justify-center sm:items-center lg:gap-8 text-8xl font-bold text-left text-outline-2">
             YUKTI <span className="text-8xl font-bold text-white">1.0</span>
           </h1>

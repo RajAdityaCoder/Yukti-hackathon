@@ -3,7 +3,7 @@ import hack from "../assets/InShot_20260204_144524301.png";
 
 const About = () => {
   return (
-    <div className="flex flex-col justify-center items-center bg-black w-[100%] lg:text-base sm:text-xs p-4 gap-4">
+    <div className="flex flex-col justify-center items-center bg-black w-[100%] lg:text-base sm:text-sm p-4 gap-4">
       <div className="flex flex-col justify-between items-center w-3/4">
         <img src={hack} alt="hack" width={800} />
         <h1 className="text-4xl font-bold text-center text-white pb-2">
