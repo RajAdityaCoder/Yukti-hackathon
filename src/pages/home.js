@@ -9,7 +9,7 @@ import code from "../assets/WhatsApp Image 2026-02-03 at 18.02.18.jpeg";
 
 const Home = () => {
   return (
-    <div className="flex flex-col items-center justify-center bg-black w-[100vw] gap-4">
+    <div className="flex flex-col items-center justify-center bg-black w-[100%] gap-4">
       <div className="flex flex-row items-center justify-center gap-6 mt-10">
         <img src={logo} alt="BBS College" width={800} />
       </div>
@@ -29,7 +29,7 @@ const Home = () => {
           <p className="text-2xl text-white">
             February 16, 2026 - February 17, 2026
           </p>
-          <p className="text-lg text-white sm:w-full sm:justify-center sm:items-center">
+          <p className="text-lg text-white sm:w-full :justify-center sm:items-center">
             Join us for THREE ROUNDS TWO DAYS of coding, collaboration, and fun!
           </p>
           <p className="text-lg text-white">
