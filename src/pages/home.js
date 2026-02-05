@@ -20,8 +20,8 @@ const Home = () => {
           className="flex h-[50vh] right-96 sm:w-80 sm:h-auto"
         />
         <div className="flex flex-col justify-center items-center h-[50vh] gap-2">
-          <h1 className="flex lg:flex-row sm:flex-col sm:justify-center sm:items-center lg:gap-8 text-9xl font-bold text-left text-outline-2">
-            YUKTI <span className="text-9xl font-bold text-white">1.0</span>
+          <h1 className="flex lg:flex-row sm:flex-col sm:justify-center sm:items-center lg:gap-8 text-8xl font-bold text-left text-outline-2">
+            YUKTI <span className="text-8xl font-bold text-white">1.0</span>
           </h1>
           <p className="text-md text-white">
             Just Make it Working Then Make it Prefect{" "}
