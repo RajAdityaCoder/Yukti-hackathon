@@ -4,7 +4,7 @@ import prize from "../assets/InShot_20260204_145801391.png";
 
 const Prizes = () => {
   return (
-    <div className="flex flex-col justify-center items-center bg-black w-100vw gap-4">
+    <div className="flex flex-col justify-center items-center bg-black w-[100%] gap-4">
       <div className="flex flex-col justify-center items-center gap-4 mb-32">
         <img src={logo} alt="logo" width={500} height={500} />
         <h1 className="font-bold text-2xl text-white">Prizes</h1>

@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="lg:flex lg:flex-col lg:items-center lg:justify-center bg-gray-900 lg:p-4 w-100vw sm:p-2">
+    <div className="lg:flex lg:flex-col lg:items-center lg:justify-center bg-gray-900 lg:p-4 w-[100%] sm:p-2">
       <div className="lg:flex lg:flex-row lg:justify-between lg:items-center w-11/12 p-4 lg:gap-4 sm:flex sm:flex-col sm:w-3/2 sm:justify-between sm:items-center sm:gap-2 sm:p-2">
         <div className="flex flex-row justify-between items-center w-3/4 p-4">
           <p className="text-lg text-center text-white lg:gap-2 lg:p-2 sm:text-md sm:flex sm:items-center sm:p-2">
