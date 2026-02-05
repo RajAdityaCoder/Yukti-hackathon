@@ -3,67 +3,82 @@ import hack from "../assets/InShot_20260204_144524301.png";
 
 const About = () => {
   return (
-    <div className="flex flex-col justify-center items-center bg-black w-[100%] lg:text-base sm:text-sm p-4 gap-4">
-      <div className="flex flex-col justify-between items-center w-3/4">
-        <img src={hack} alt="hack" width={800} />
-        <h1 className="text-4xl font-bold text-center text-white pb-2">
+    <section className="bg-black text-white px-4 py-8 lg:px-10">
+      <div className="max-w-5xl mx-auto flex flex-col items-center gap-6">
+        <img src={hack} alt="hack" className="w-full max-w-3xl rounded-lg" />
+
+        <h1 className="text-2xl font-bold text-center lg:text-4xl">
           ABOUT YUKTI 1.0
         </h1>
-        <hr className="w-full border-t-2 border-white pt-2 pb-2" />
-        <p className="text-white">
-          This YUKTI 1.0(hackathon), is designed to evaluate real-world problem
+
+        <hr className="w-full border-gray-400" />
+
+        <p className="text-sm text-center lg:text-base lg:text-left">
+          YUKTI 1.0 (hackathon) is designed to evaluate real-world problem
           solving, technical execution, and collaborative development under time
-          constraints. Participants will work on theme-based problem statements
-          provided by the organizers and progress through three structured
-          evaluation rounds over two days. The focus is on originality, live
-          development, and practical implementation.
+          constraints. Participants work on theme-based problem statements and
+          progress through three structured evaluation rounds over two days. The
+          focus is on originality, live development, and practical
+          implementation.
         </p>
       </div>
-      <div className="flex flex-col justify-between items-center w-3/4 p-4">
-        <h2 className="text-4xl font-bold text-center text-white pb-2">
+
+      <div className="max-w-5xl mx-auto mt-12 flex flex-col items-center gap-6">
+        <h2 className="text-2xl font-bold text-center lg:text-4xl">
           YUKTI 1.0 THEME
         </h2>
-        <hr className="w-full border-t-2 border-white pt-2 pb-2" />
-        <p className="text-white">
-          Projects will be based on problem statements aligned with selected
-          themes such as Artificial Intelligence, Web Applications, Smart
-          Education, Healthcare and Social Impact, FinTech, Smart Governance,
+
+        <hr className="w-full border-gray-400" />
+
+        <p className="text-sm text-center lg:text-base lg:text-left">
+          Projects will be based on problem statements aligned with themes such
+          as Artificial Intelligence, Web Applications, Smart Education,
+          Healthcare and Social Impact, FinTech, Smart Governance,
           Sustainability, and Smart Cities. Exact problem statements will be
-          disclosed at the start of the YUKTI 1.0.
+          disclosed at the start of YUKTI 1.0.
         </p>
       </div>
-      <div className="flex flex-col justify-between items-center w-11/12 p-4">
-        <h2 className="text-4xl font-bold text-center text-white pb-2">
-          YUKTI - HACKS STRUCTURE and EVALUATION ROUNDS
+
+      <div className="max-w-6xl mx-auto mt-12">
+        <h2 className="text-2xl font-bold text-center lg:text-4xl mb-4">
+          YUKTI – HACKS STRUCTURE & EVALUATION ROUNDS
         </h2>
-        <hr className="w-full border-t-2 border-white pt-2 pb-2" />
-        <div className="flex flex-row justify-between items-center gap-4 mb-32">
-          <p className="text-white">
-            Round 1: Technical Screening (Day 1 – Morning) Teams will be
-            assigned technical tasks related to their selected theme. This may
-            include solution architecture design, database or API planning,
-            logic flow definition, UI wireframes, and initial project setup.
-            This round evaluates technical clarity, feasibility, and
-            understanding of the problem.
-          </p>
-          <p className="text-white">
-            Round 2: Development and Progress Review (Day 1 – Afternoon)
-            Shortlisted teams will begin active development. Judges will assess
-            core feature implementation, code quality, technology usage, and
-            team collaboration. Teams showing weak progress or unclear
-            implementation may be eliminated. Teams with strong progress will
-            move to the next round.
-          </p>
-          <p className="text-white">
-            Round 3: Final Demo and Presentation (Day 2) Finalist teams will
-            present a working prototype and explain the problem statement,
-            solution approach, technology stack, key features, and future scope.
-            Final evaluation will determine the winners.
-          </p>
+
+        <hr className="border-gray-400 mb-8" />
+
+        <div className="flex flex-col gap-6 lg:flex-row lg:gap-8">
+          <Round
+            title="Round 1: Technical Screening (Day 1 – Morning)"
+            text="Teams will be assigned technical tasks related to their
+            selected theme including solution architecture, database or API
+            planning, logic flow, UI wireframes, and initial project setup.
+            This round evaluates feasibility and technical clarity."
+          />
+
+          <Round
+            title="Round 2: Development & Progress Review (Day 1 – Afternoon)"
+            text="Shortlisted teams begin active development. Judges assess
+            feature implementation, code quality, technology usage, and
+            collaboration. Weak progress may lead to elimination."
+          />
+
+          <Round
+            title="Round 3: Final Demo & Presentation (Day 2)"
+            text="Finalist teams present a working prototype explaining the
+            problem, solution approach, technology stack, key features, and
+            future scope. Winners are decided in this round."
+          />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
+
+const Round = ({ title, text }) => (
+  <div className="bg-gray-900 p-4 rounded-lg flex-1">
+    <h3 className="font-semibold mb-2">{title}</h3>
+    <p className="text-sm lg:text-base">{text}</p>
+  </div>
+);
 
 export default About;
