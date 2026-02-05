@@ -3,7 +3,7 @@ import rules from "../assets/toppng.com-rules-and-regulations-1235x758.png";
 
 const Rules = () => {
   return (
-    <div className="flex flex-col items-center justify-center bg-black w-[100%] gap-4">
+    <div className="flex flex-col items-center justify-center bg-black w-[100%] lg:text-base sm:text-sm gap-4">
       <div className="flex flex-col items-center justify-between w-11/12 mt-10 gap-5 mb-10">
         <img src={rules} alt="YUKTI 1.0 Rules" className="w-96 h-auto" />
         <h2 className="text-4xl font-bold text-center text-white">
