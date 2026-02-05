@@ -9,7 +9,7 @@ import code from "../assets/WhatsApp Image 2026-02-03 at 18.02.18.jpeg";
 
 const Home = () => {
   return (
-    <div className="flex flex-col items-center justify-center bg-black w-[100%] lg:text-base sm:text-sm gap-4">
+    <div className="flex flex-col items-center justify-center bg-black w-[100%] lg:text-base sm:text-xs gap-4">
       <div className="flex flex-row items-center justify-center gap-6 mt-10">
         <img src={logo} alt="BBS College" width={800} />
       </div>
