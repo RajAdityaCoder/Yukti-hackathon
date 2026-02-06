@@ -4,37 +4,58 @@ import prize from "../assets/InShot_20260204_145801391.png";
 
 const Prizes = () => {
   return (
-    <div className="flex flex-col justify-center items-center bg-black w-[100%] lg:text-base sm:text-sm gap-4">
-      <div className="flex flex-col justify-center items-center gap-4 mb-32">
-        <img src={logo} alt="logo" width={500} height={500} />
-        <h1 className="font-bold text-2xl text-white">Prizes</h1>
-        <hr className="w-1/2 border-t-2 border-white" />
-        <p className="text-lg text-center text-white">
+    <div className="flex flex-col items-center justify-center bg-black w-full gap-4 px-4">
+      <div className="flex flex-col items-center gap-6 mb-32 w-full">
+        <img
+          src={logo}
+          alt="logo"
+          className="w-64 lg:w-[500px] h-auto drop-shadow-[0_0_30px_rgba(140,82,255,0.4)]"
+        />
+
+        <h1 className="font-bold text-3xl text-white tracking-wide">
+          🏆 Prizes
+        </h1>
+
+        <hr className="w-1/2 border-t-2 border-white/30" />
+
+        <p className="text-lg text-center text-white/80 max-w-2xl">
           Prizes will be distributed to the top 3 teams based on the judging
           criteria.
         </p>
-        <div className="flex flex-col justify-between items-center gap-4">
-          <img className="w-auto h-96" src={prize} alt="Prizes" />
-          <div className="flex flex-row justify-between items-center w-11/12 gap-4">
-            <div className="flex flex-col justify-between items-center gap-2">
-              <p className="text-white text-2xl font-bold">First Place</p>
-              <p className="text-white text-2xl font-bold">₹10,000</p>
+
+        {/* Prize Image */}
+        <img
+          src={prize}
+          alt="Prizes"
+          className="w-full max-w-md lg:max-w-xl h-auto rounded-xl
+                     shadow-[0_0_40px_rgba(140,82,255,0.25)]
+                     hover:scale-105 transition-all duration-500"
+        />
+
+        <div className="flex flex-col lg:flex-row justify-between items-center w-full max-w-3xl gap-6 mt-6">
+          {[
+            { title: "🥇 First Place", amount: "₹10,000" },
+            { title: "🥈 Second Place", amount: "₹5,000" },
+            { title: "🥉 Third Place", amount: "₹2,100" },
+          ].map((item, i) => (
+            <div
+              key={i}
+              className="flex flex-col items-center gap-2 px-8 py-6 rounded-2xl
+                         bg-white/5 backdrop-blur-md border border-white/10
+                         hover:border-[#8c52ff] hover:shadow-[0_0_25px_rgba(140,82,255,0.4)]
+                         hover:-translate-y-2 transition-all duration-300"
+            >
+              <p className="text-white text-xl font-bold">{item.title}</p>
+              <p className="text-[#8c52ff] text-2xl font-extrabold">
+                {item.amount}
+              </p>
             </div>
-            <div className="flex flex-col justify-between items-center gap-2">
-              <p className="text-white text-2xl font-bold">Second Place</p>
-              <p className="text-white text-2xl font-bold">₹5,000</p>
-            </div>
-            <div className="flex flex-col justify-between items-center gap-2">
-              <p className="text-white text-2xl font-bold">Third Place</p>
-              <p className="text-white text-2xl font-bold">₹2,100</p>
-            </div>
-          </div>
+          ))}
         </div>
-        <div className="flex flex-col justify-between items-center mt-8 mb-8">
-          <p className="text-white text-lg">
-            All other participants will receive a certificate of participation.
-          </p>
-        </div>
+
+        <p className="text-white/70 text-lg text-center mt-8">
+          All other participants will receive a certificate of participation.
+        </p>
       </div>
     </div>
   );

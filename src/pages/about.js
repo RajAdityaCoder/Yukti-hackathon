@@ -25,60 +25,58 @@ const About = () => {
 
       <div className="max-w-5xl mx-auto mt-12 flex flex-col items-center gap-6">
         <h2 className="text-2xl font-bold text-center lg:text-4xl">
-          YUKTI 1.0 THEME
+          ABOUT BBS College of Engineering and Technology
         </h2>
 
         <hr className="w-full border-gray-400" />
 
         <p className="text-sm text-center lg:text-base lg:text-left">
-          Projects will be based on problem statements aligned with themes such
-          as Artificial Intelligence, Web Applications, Smart Education,
-          Healthcare and Social Impact, FinTech, Smart Governance,
-          Sustainability, and Smart Cities. Exact problem statements will be
-          disclosed at the start of YUKTI 1.0.
+          BBS College of Engineering and Technology, Phaphamau, Prayagraj,
+          India, is a premier engineering college that offers a range of
+          programs in various disciplines. The college is known for its
+          high-quality education, state-of-the-art infrastructure, and
+          industry-relevant curriculum. It has a vibrant community of students
+          who are passionate about learning and growing in their respective
+          fields.
         </p>
       </div>
 
       <div className="max-w-6xl mx-auto mt-12">
         <h2 className="text-2xl font-bold text-center lg:text-4xl mb-4">
-          YUKTI – HACKS STRUCTURE & EVALUATION ROUNDS
+          ABOUT CSI(Computer Society of India)
         </h2>
 
         <hr className="border-gray-400 mb-8" />
 
-        <div className="flex flex-col gap-6 lg:flex-row lg:gap-8">
-          <Round
-            title="Round 1: Technical Screening (Day 1 – Morning)"
-            text="Teams will be assigned technical tasks related to their
-            selected theme including solution architecture, database or API
-            planning, logic flow, UI wireframes, and initial project setup.
-            This round evaluates feasibility and technical clarity."
-          />
+        <p className="text-sm text-center lg:text-base lg:text-left">
+          CSI (Computer Society of India) is a leading organization that
+          promotes computer literacy and technology in the country. It was
+          founded in 1968 and has since then been a major player in the
+          development of computer science and information technology. CSI works
+          towards the advancement of technology by organizing various events,
+          workshops, and conferences. It also provides a platform for students
+          to learn and grow in the field of computer science.
+        </p>
+      </div>
 
-          <Round
-            title="Round 2: Development & Progress Review (Day 1 – Afternoon)"
-            text="Shortlisted teams begin active development. Judges assess
-            feature implementation, code quality, technology usage, and
-            collaboration. Weak progress may lead to elimination."
-          />
+      <div className="max-w-6xl mx-auto mt-12">
+        <h2 className="text-2xl font-bold text-center lg:text-4xl mb-4">
+          ABOUT CodeVirus Security
+        </h2>
 
-          <Round
-            title="Round 3: Final Demo & Presentation (Day 2)"
-            text="Finalist teams present a working prototype explaining the
-            problem, solution approach, technology stack, key features, and
-            future scope. Winners are decided in this round."
-          />
-        </div>
+        <hr className="border-gray-400 mb-8" />
+
+        <p className="text-sm text-center lg:text-base lg:text-left">
+          CodeVirus Security is a leading organization that specializes in
+          providing cybersecurity solutions to businesses and individuals. It
+          offers a range of services, including penetration testing, malware
+          analysis, and risk assessment. The organization also provides training
+          and awareness programs to its clients to help them stay protected
+          against cyber threats.
+        </p>
       </div>
     </section>
   );
 };
-
-const Round = ({ title, text }) => (
-  <div className="bg-gray-900 p-4 rounded-lg flex-1">
-    <h3 className="font-semibold mb-2">{title}</h3>
-    <p className="text-sm lg:text-base">{text}</p>
-  </div>
-);
 
 export default About;

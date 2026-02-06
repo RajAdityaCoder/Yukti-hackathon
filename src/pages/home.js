@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import logo from "../assets/logoReverseNew.png";
 import tech1 from "../assets/IMG_20260203_172255.png";
 import des1 from "../assets/computer-program-coding-screen.jpg";
@@ -6,12 +6,77 @@ import des2 from "../assets/StockCake-Tech_Team_Working-762339-medium.jpg";
 import des3 from "../assets/people-working-with-devices-office.jpg";
 import des4 from "../assets/young-employees-sitting-office-table-using-laptop-team-work-brainstorming-meeting-concept.jpg";
 import code from "../assets/WhatsApp Image 2026-02-03 at 18.02.18.jpeg";
-import csi from "../assets/CSI-logo.png";
+import csi from "../assets/CSI-logo-removedBG.png";
+
+const targetDate = new Date("2026-02-15T00:00:00").getTime();
+const steps = [
+  {
+    title: "Understand the Problem",
+    desc: "Analyze the problem statement, constraints, and expected outcomes.",
+  },
+  {
+    title: "Ideate & Plan",
+    desc: "Brainstorm innovative ideas and design a clear solution approach.",
+  },
+  {
+    title: "Develop the Solution",
+    desc: "Build the project using suitable technologies and frameworks.",
+  },
+  {
+    title: "Submit & Present",
+    desc: "Demonstrate your working solution and explain future scope.",
+  },
+];
 
 const Home = () => {
+  const [timeLeft, setTimeLeft] = useState({
+    days: "00",
+    hours: "00",
+    minutes: "00",
+    seconds: "00",
+  });
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const now = new Date().getTime();
+      const diff = targetDate - now;
+
+      if (diff <= 0) {
+        setTimeLeft({
+          days: "00",
+          hours: "00",
+          minutes: "00",
+          seconds: "00",
+        });
+        clearInterval(interval);
+        return;
+      }
+
+      const days = String(Math.floor(diff / (1000 * 60 * 60 * 24))).padStart(
+        2,
+        "0"
+      );
+
+      const hours = String(Math.floor((diff / (1000 * 60 * 60)) % 24)).padStart(
+        2,
+        "0"
+      );
+
+      const minutes = String(Math.floor((diff / (1000 * 60)) % 60)).padStart(
+        2,
+        "0"
+      );
+
+      const seconds = String(Math.floor((diff / 1000) % 60)).padStart(2, "0");
+
+      setTimeLeft({ days, hours, minutes, seconds });
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="flex flex-col items-center justify-center bg-black w-full text-sm md:text-base gap-4">
-      {/* LOGO */}
       <div className="flex flex-row items-center justify-center gap-6 mt-10">
         <img
           src={logo}
@@ -68,6 +133,27 @@ const Home = () => {
         </div>
       </div>
 
+      <div className="text-center text-outline-1 text-9xl font-mono">
+        <span className="mr-2 text-white text-2xl">
+          Registration Closes In:
+        </span>
+
+        <span className="bg-black px-3 py-1 rounded-md">{timeLeft.days}</span>
+        <span className="mx-1">:</span>
+
+        <span className="bg-black px-3 py-1 rounded-md">{timeLeft.hours}</span>
+        <span className="mx-1">:</span>
+
+        <span className="bg-black px-3 py-1 rounded-md">
+          {timeLeft.minutes}
+        </span>
+        <span className="mx-1">:</span>
+
+        <span className="bg-black px-3 py-1 rounded-md">
+          {timeLeft.seconds}
+        </span>
+      </div>
+
       <div className="flex flex-col justify-center items-center bg-gray-900 w-full gap-4 p-10">
         <h2 className="text-4xl font-bold text-center text-[#8c52ff]">
           How Does It <span className="text-white">Work?</span>
@@ -94,10 +180,8 @@ const Home = () => {
             )}
 
             <p className="flex flex-col text-2xl text-center text-white">
-              {index + 1}. Step Description
-              <span className="text-lg">
-                Explanation for this step goes here.
-              </span>
+              {index + 1}. {steps[index].title}
+              <span className="text-lg text-white">{steps[index].desc}</span>
             </p>
 
             {index % 2 !== 0 && (
@@ -107,6 +191,53 @@ const Home = () => {
         ))}
       </div>
 
+      <div className="flex flex-col justify-center items-center w-full mt-10 gap-4">
+        <h2 className="text-4xl font-bold text-center text-[#8c52ff]">
+          Day <span className="text-white">Schedule</span>
+        </h2>
+
+        <hr className="w-1/2 border-t-2 border-white" />
+        <div className="flex flex-col lg:flex-row justify-center items-stretch gap-6 w-full mt-6 px-4">
+          <div className="flex flex-col bg-gray-900 rounded-2xl p-6 w-full lg:w-2/5 border border-white/10">
+            <h3 className="text-2xl font-bold text-[#8c52ff] text-center mb-2">
+              Day 1 – 16 Feb 2026
+            </h3>
+            <p className="text-center text-gray-300 mb-4">
+              Inauguration & Technical Screening
+            </p>
+
+            <ul className="text-white space-y-2 text-sm lg:text-base">
+              <li>🕙 10:00 AM – Welcome of Guests & Participants</li>
+              <li>🪔 10:05 AM – Inauguration & Saraswati Vandana</li>
+              <li>🎤 10:10 AM – Address by Director</li>
+              <li>🎓 10:15 AM – Address by Dean (R&amp;D)</li>
+              <li>🎓 10:25 AM – Address by Dean (Academics)</li>
+              <li>📋 10:30 AM – Hackathon Briefing (Rules)</li>
+              <li>🚶 10:45 AM – Move to Venue</li>
+              <li>💻 11:00 AM – 02:00 PM – Problem Case Statements</li>
+              <li>📢 03:00 PM – Round 1 Results & Shortlisting</li>
+            </ul>
+          </div>
+
+          <div className="flex flex-col bg-gray-900 rounded-2xl p-6 w-full lg:w-2/5 border border-white/10">
+            <h3 className="text-2xl font-bold text-[#8c52ff] text-center mb-2">
+              Day 2 – 17 Feb 2026
+            </h3>
+            <p className="text-center text-gray-300 mb-4">
+              Presentations & Valedictory
+            </p>
+
+            <ul className="text-white space-y-2 text-sm lg:text-base">
+              <li>💡 10:00 AM – 01:00 PM – Final Presentations (Round 2)</li>
+              <li>🍽️ 01:00 PM – 02:00 PM – Lunch Break</li>
+              <li>🏆 02:00 PM – Result Announcement</li>
+              <li>📜 Certificate Distribution</li>
+              <li>🎉 Valedictory & Closing Ceremony</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
       <div className="flex flex-col justify-center items-center w-full mt-20 gap-4">
         <h2 className="text-4xl font-bold text-center text-[#8c52ff]">
           Our <span className="text-white">Judges</span>
@@ -114,8 +245,9 @@ const Home = () => {
 
         <hr className="w-1/2 border-t-2 border-white" />
 
-        <p className="text-2xl text-center text-white w-2/3">
-          Judges are experienced industry professionals
+        <p className="text-2xl text-center text-white w-3/4">
+          Judges are experienced industry professionals who have a deep
+          understanding of the technologies and industry trends.{" "}
           <span className="block text-lg">(MNNIT and IIT experts)</span>
         </p>
       </div>
@@ -153,8 +285,7 @@ const Home = () => {
         </a>
       </div>
 
-      {/* ASSOCIATED */}
-      <div className="flex flex-col items-center w-full mt-20 mb-10 gap-4">
+      <div className="flex flex-col items-center w-full mt-10 mb-10 gap-4">
         <h2 className="text-4xl font-bold text-center text-[#8c52ff]">
           Associated <span className="text-white">With</span>
         </h2>
