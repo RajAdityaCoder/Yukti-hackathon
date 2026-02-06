@@ -133,8 +133,8 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="text-center text-outline-1 text-9xl font-mono">
-        <span className="mr-2 text-white text-2xl">
+      <div className="text-center text-outline-1 lg:text-9xl sm:text-6xl font-mono">
+        <span className="mr-2 text-white lg:text-2xl sm:text-base">
           Registration Closes In:
         </span>
 
