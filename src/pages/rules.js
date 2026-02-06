@@ -22,7 +22,6 @@ const Rules = () => {
           Please read the rules carefully before registering.
         </p>
 
-        {/* Evaluation Rounds */}
         <div className="w-full lg:w-3/4 p-4 text-white">
           <h3 className="font-bold text-2xl lg:text-3xl">
             Hackathon Evaluation Rounds
@@ -38,7 +37,7 @@ const Rules = () => {
             />
             <Round
               title="ii. Round 2 (Elimination Round):"
-              text="Teams shortlisted from Round 1 will be required to solve a given problem statement within the specified time."
+              text="Based on the selected theme, teams must develop solutions to the given problem and successfully pass the defined test cases. Evaluation for advancement to the next round will be strictly based on test case performance and the specified evaluation criteria."
             />
             <Round
               title="iii. Round 3 (Presentation Round):"
@@ -47,7 +46,6 @@ const Rules = () => {
           </div>
         </div>
 
-        {/* Reusable Section Wrapper */}
         {[
           {
             title: "Team Requirements",
@@ -64,7 +62,10 @@ const Rules = () => {
           <p className="text-base">
             Each participant must bring the following:
           </p>
-          <p>i. Valid college ID for registration and verification.</p>
+          <p>
+            i. Valid ID(College ID/Aadhar Card/Pan Card) proof for Verification
+            on center.
+          </p>
           <p>ii. A personal laptop with required software installed.</p>
           <p>iii. Laptop charger and necessary adapters.</p>
           <br />
@@ -111,10 +112,10 @@ const Rules = () => {
         </Section>
 
         <Section title="Judging & Final Authority">
-          <ol className="list-decimal list-inside text-base">
+          <ol className="list-decimal list-inside">
             <li>
               The judges and organizing committee hold full authority over:
-              <ul className="list-disc list-inside text-base">
+              <ul className="list-disc list-inside">
                 <li>Project evaluation</li>
                 <li>Shortlisting and winner selection</li>
                 <li>Rule enforcement</li>

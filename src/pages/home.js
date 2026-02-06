@@ -11,20 +11,20 @@ import csi from "../assets/CSI-logo-removedBG.png";
 const targetDate = new Date("2026-02-15T00:00:00").getTime();
 const steps = [
   {
-    title: "Understand the Problem",
-    desc: "Analyze the problem statement, constraints, and expected outcomes.",
+    title: "Theme Selection & Problem Identification",
+    desc: "Select a theme and identify a real-world problem that is relevant, impactful, and feasible.",
   },
   {
-    title: "Ideate & Plan",
-    desc: "Brainstorm innovative ideas and design a clear solution approach.",
+    title: "Solution Proposal & Evaluation",
+    desc: "Design and submit a structured solution outlining your approach, feasibility, and expected impact.",
   },
   {
-    title: "Develop the Solution",
-    desc: "Build the project using suitable technologies and frameworks.",
+    title: "Development & Implementation",
+    desc: "Build a working prototype during the hackathon that meets requirements and passes test cases.",
   },
   {
-    title: "Submit & Present",
-    desc: "Demonstrate your working solution and explain future scope.",
+    title: "Final Demonstration & Submission",
+    desc: "Present the completed project, submit final deliverables, and compete for winning positions.",
   },
 ];
 
@@ -88,7 +88,7 @@ const Home = () => {
       <div className="flex flex-col lg:flex-row items-center justify-center">
         <img src={tech1} alt="tech" className="sm:w-80 sm:h-auto" />
 
-        <div className="flex flex-col justify-center items-center h-full gap-2 text-center">
+        <div className="flex flex-col justify-center items-center h-full gap-2 text-center overflow-x-hidden">
           <h1 className="flex flex-col sm:flex-row justify-center items-center gap-4 text-5xl sm:text-6xl lg:text-8xl font-bold text-outline-2">
             YUKTI <span className="text-white">1.0</span>
           </h1>
@@ -133,25 +133,46 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="text-center text-outline-1 lg:text-9xl sm:text-6xl font-mono">
-        <span className="mr-2 text-white lg:text-2xl sm:text-base">
-          Registration Closes In:
+      <div className="flex flex-col items-center font-mono">
+        <span className="text-white lg:text-2xl sm:text-base mb-4">
+          Registration Closes In
         </span>
 
-        <span className="bg-black px-3 py-1 rounded-md">{timeLeft.days}</span>
-        <span className="mx-1">:</span>
+        <div className="flex gap-3 flex-wrap max-w-full">
+          <div className="flex flex-col items-center">
+            <span className="text-outline-1 px-4 py-2 rounded-md lg:text-9xl sm:text-5xl">
+              {timeLeft.days}
+            </span>
+            <span className="text-sm mt-1 text-white">Days</span>
+          </div>
 
-        <span className="bg-black px-3 py-1 rounded-md">{timeLeft.hours}</span>
-        <span className="mx-1">:</span>
+          <span className="lg:text-9xl text-outline-1 sm:text-5xl">:</span>
 
-        <span className="bg-black px-3 py-1 rounded-md">
-          {timeLeft.minutes}
-        </span>
-        <span className="mx-1">:</span>
+          <div className="flex flex-col items-center">
+            <span className="text-outline-1 px-4 py-2 rounded-md lg:text-9xl sm:text-5xl">
+              {timeLeft.hours}
+            </span>
+            <span className="text-sm mt-1 text-white">Hours</span>
+          </div>
 
-        <span className="bg-black px-3 py-1 rounded-md">
-          {timeLeft.seconds}
-        </span>
+          <span className="lg:text-9xl text-outline-1 sm:text-5xl">:</span>
+
+          <div className="flex flex-col items-center">
+            <span className="text-outline-1 px-4 py-2 rounded-md lg:text-9xl sm:text-5xl">
+              {timeLeft.minutes}
+            </span>
+            <span className="text-sm mt-1 text-white">Minutes</span>
+          </div>
+
+          <span className="lg:text-9xl text-outline-1 sm:text-5xl">:</span>
+
+          <div className="flex flex-col items-center">
+            <span className="text-outline-1 px-4 py-2 rounded-md lg:text-9xl sm:text-5xl">
+              {timeLeft.seconds}
+            </span>
+            <span className="text-sm mt-1 text-white">Seconds</span>
+          </div>
+        </div>
       </div>
 
       <div className="flex flex-col justify-center items-center bg-gray-900 w-full gap-4 p-10">
@@ -176,7 +197,11 @@ const Home = () => {
             className="flex flex-col lg:flex-row justify-between items-center lg:w-3/4 sm:w-11/12 gap-4"
           >
             {index % 2 === 0 && (
-              <img src={img} alt="step" className="sm:w-60 lg:w-[500px]" />
+              <img
+                src={img}
+                alt="step"
+                className="hidden lg:block lg:w-[500px]"
+              />
             )}
 
             <p className="flex flex-col text-2xl text-center text-white">
@@ -185,7 +210,11 @@ const Home = () => {
             </p>
 
             {index % 2 !== 0 && (
-              <img src={img} alt="step" className="sm:w-60 lg:w-[500px]" />
+              <img
+                src={img}
+                alt="step"
+                className="hidden lg:block lg:w-[500px]"
+              />
             )}
           </div>
         ))}
