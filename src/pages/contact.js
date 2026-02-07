@@ -11,9 +11,10 @@ import sakshiM from "../assets/teams/SakshiM.jpg";
 import sakshiP from "../assets/teams/SakshiP.jpg";
 import kartikey from "../assets/teams/Kartikey.jpg";
 import raj from "../assets/teams/Raj.jpg";
+import adi from "../assets/teams/Adi.jpeg";
 
 const volunteerImages = [
-  "",
+  adi,
   adarsh,
   raj,
   "",
@@ -72,7 +73,10 @@ const Contact = () => {
       name: "Sakshi Mishra",
       linkedin: "https://www.linkedin.com/in/sakshi-mishra-44269b2b6/",
     },
-    { name: "Sakshi Pandey" },
+    {
+      name: "Sakshi Pandey",
+      linkedin: "https://www.linkedin.com/in/sakshi-pandey-2050452b6/",
+    },
     {
       name: "Kartikey Singh",
       phone: "+91-9532120799",
@@ -94,7 +98,7 @@ const Contact = () => {
         "https://www.instagram.com/official_amanmaurya?igsh=MjcxZXAzZnU3bnJn",
     },
     {
-      name: "Shubham Yadav",
+      name: "Shubham Krishna Yadav",
       phone: "+91-8470922204",
       linkedin: "https://www.linkedin.com/in/shubhamkrishna359/",
     },
@@ -102,7 +106,9 @@ const Contact = () => {
   return (
     <section className="bg-black text-white px-4 py-10 min-h-screen flex flex-col">
       <div className="max-w-5xl mx-auto text-center">
-        <h1 className="text-2xl font-bold lg:text-4xl">WANT TO KNOW MORE?</h1>
+        <h1 className="text-2xl font-bold lg:text-4xl">
+          <span className="text-[#8c52ff]">WANT TO KNOW </span>MORE?
+        </h1>
 
         <hr className="my-4 border-gray-400" />
 
@@ -130,7 +136,7 @@ const Contact = () => {
 const ContactCard = ({ name, phone, index, linkedin, instagram }) => (
   <div className="bg-gray-900 p-4 rounded-lg flex items-center gap-4">
     <img
-      className="w-20 h-20 rounded-full object-cover lg:w-24 lg:h-24"
+      className="w-20 h-20 rounded-full object-cover object-top lg:w-24 lg:h-24"
       src={volunteerImages[index % volunteerImages.length]}
       alt={name}
     />

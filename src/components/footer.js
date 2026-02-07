@@ -10,10 +10,11 @@ import sakshiM from "../assets/teams/SakshiM.jpg";
 import sakshiP from "../assets/teams/SakshiP.jpg";
 import kartikey from "../assets/teams/Kartikey.jpg";
 import raj from "../assets/teams/Raj.jpg";
+import adi from "../assets/teams/Adi.jpeg";
 
 const Footer = () => {
   const volunteerImages = [
-    "",
+    adi,
     adarsh,
     raj,
     "",
@@ -34,11 +35,11 @@ const Footer = () => {
         <p className="text-sm text-center lg:text-base lg:text-left">
           For more information, please visit our{" "}
           <a href="/about" className="text-blue-400 hover:underline">
-            About Page
+            About
           </a>{" "}
           or{" "}
           <a href="/contact" className="text-blue-400 hover:underline">
-            Contact Page
+            Our Teams
           </a>
         </p>
 
@@ -51,7 +52,7 @@ const Footer = () => {
               .map((_, i) => (
                 <img
                   key={i}
-                  className="h-12 w-12 rounded-full object-cover lg:h-14 lg:w-14"
+                  className="h-12 w-12 rounded-full object-cover object-top lg:h-14 lg:w-14"
                   src={volunteerImages[i % volunteerImages.length]}
                   alt="Volunteer"
                 />

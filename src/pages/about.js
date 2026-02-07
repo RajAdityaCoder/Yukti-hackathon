@@ -8,7 +8,7 @@ const About = () => {
         <img src={hack} alt="hack" className="w-full max-w-3xl rounded-lg" />
 
         <h1 className="text-2xl font-bold text-center lg:text-4xl">
-          ABOUT YUKTI 1.0
+          <span className="text-[#8c52ff]">About</span> YUKTI 1.0
         </h1>
 
         <hr className="w-full border-gray-400" />
@@ -25,7 +25,8 @@ const About = () => {
 
       <div className="max-w-5xl mx-auto mt-12 flex flex-col items-center gap-6">
         <h2 className="text-2xl font-bold text-center lg:text-4xl">
-          ABOUT BBS College of Engineering and Technology
+          <span className="text-[#8c52ff]">About</span> BBS College of
+          Engineering and Technology
         </h2>
 
         <hr className="w-full border-gray-400" />
@@ -43,7 +44,8 @@ const About = () => {
 
       <div className="max-w-6xl mx-auto mt-12">
         <h2 className="text-2xl font-bold text-center lg:text-4xl mb-4">
-          ABOUT CSI(Computer Society of India)
+          <span className="text-[#8c52ff]"> About</span> CSI(Computer Society of
+          India)
         </h2>
 
         <hr className="border-gray-400 mb-8" />

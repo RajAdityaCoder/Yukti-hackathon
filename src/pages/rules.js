@@ -5,7 +5,6 @@ const Rules = () => {
   return (
     <div className="flex flex-col items-center justify-center bg-black w-full gap-4 px-4">
       <div className="flex flex-col items-center w-full max-w-6xl mt-10 gap-5 mb-10">
-        {/* Header */}
         <img
           src={rules}
           alt="YUKTI 1.0 Rules"
@@ -13,7 +12,7 @@ const Rules = () => {
         />
 
         <h2 className="text-3xl lg:text-4xl font-bold text-center text-white">
-          YUKTI 1.0 Rules
+          YUKTI 1.0 <span className="text-[#8c52ff]">Rules</span>
         </h2>
 
         <hr className="w-full border-t-2 border-white" />
@@ -24,7 +23,7 @@ const Rules = () => {
 
         <div className="w-full lg:w-3/4 p-4 text-white">
           <h3 className="font-bold text-2xl lg:text-3xl">
-            Hackathon Evaluation Rounds
+            <span className="text-[#8c52ff]">Hackathon</span> Evaluation Rounds
           </h3>
           <p className="text-base mt-1">
             The Hackathon will be conducted in three rounds:
@@ -33,7 +32,7 @@ const Rules = () => {
           <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 mt-4">
             <Round
               title="i. Round 1 (Shortlisting Round):"
-              text="Participants are required to prepare and submit a proposed solution based on the hackathon theme. Projects will be evaluated primarily on the clarity, feasibility and innovation of the solution approach."
+              text="Participants are required to prepare and submit a proposed solution based on the hackathon theme. Projects will be evaluated primarily on the clarity, feasibility and innovation of the solution approach.Video presentation along with registration is not mandatory but we'll prefer it for shortlisting in round 1."
             />
             <Round
               title="ii. Round 2 (Elimination Round):"
@@ -85,6 +84,10 @@ const Rules = () => {
           <p>
             v. Each team must submit source code, documentation, and a working
             demo.
+          </p>
+          <p>
+            Video presentation along with registration is not mandatory but
+            we'll prefer it for shortlisting in round 1
           </p>
         </Section>
 
