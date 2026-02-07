@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import yukti from "../assets/InShot_20260204_143344831.png";
+import yukti from "../assets/website/InShot_20260204_143344831.png";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -54,7 +54,7 @@ const Navbar = () => {
 const NavLink = ({ to, children }) => (
   <Link
     to={to}
-    className="text-base hover:text-gray-300 hover:scale-110 transition duration-300"
+    className="text-base hover:text-gray-300 hover:scale-110 hover:overflow-x-hidden transition duration-300"
   >
     {children}
   </Link>

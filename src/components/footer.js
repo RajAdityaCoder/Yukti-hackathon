@@ -1,6 +1,33 @@
 import React from "react";
+import adarsh from "../assets/teams/Adarsh.jpeg";
+import aman from "../assets/teams/Aman.jpg";
+import shubham from "../assets/teams/Shubham.png";
+import hardik from "../assets/teams/Hardik.jpg";
+import akarshit from "../assets/teams/Akarshit.jpeg";
+import anu from "../assets/teams/Anu.jpg";
+import diksha from "../assets/teams/Diksha.jpg";
+import sakshiM from "../assets/teams/SakshiM.jpg";
+import sakshiP from "../assets/teams/SakshiP.jpg";
+import kartikey from "../assets/teams/Kartikey.jpg";
+import raj from "../assets/teams/Raj.jpg";
 
 const Footer = () => {
+  const volunteerImages = [
+    "",
+    adarsh,
+    raj,
+    "",
+    hardik,
+    akarshit,
+    anu,
+    diksha,
+    sakshiM,
+    sakshiP,
+    kartikey,
+    "",
+    aman,
+    shubham,
+  ];
   return (
     <footer className="bg-gray-900 text-white px-4 py-6 lg:px-10 lg:py-8">
       <div className="flex flex-col gap-6 lg:flex-row lg:justify-between lg:items-center max-w-7xl mx-auto">
@@ -19,13 +46,13 @@ const Footer = () => {
           <p className="font-bold text-md">Our Team Volunteers</p>
 
           <div className="grid grid-cols-5 gap-3">
-            {Array(10)
+            {Array(14)
               .fill(0)
               .map((_, i) => (
                 <img
                   key={i}
                   className="h-12 w-12 rounded-full object-cover lg:h-14 lg:w-14"
-                  src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=200&q=80"
+                  src={volunteerImages[i % volunteerImages.length]}
                   alt="Volunteer"
                 />
               ))}

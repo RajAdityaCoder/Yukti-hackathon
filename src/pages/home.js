@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
-import logo from "../assets/logoReverseNew.png";
-import tech1 from "../assets/IMG_20260203_172255.png";
-import des1 from "../assets/computer-program-coding-screen.jpg";
-import des2 from "../assets/StockCake-Tech_Team_Working-762339-medium.jpg";
-import des3 from "../assets/people-working-with-devices-office.jpg";
-import des4 from "../assets/young-employees-sitting-office-table-using-laptop-team-work-brainstorming-meeting-concept.jpg";
-import code from "../assets/WhatsApp Image 2026-02-03 at 18.02.18.jpeg";
-import csi from "../assets/CSI-logo-removedBG.png";
+import logo from "../assets/website/logoReverseNew.png";
+import tech1 from "../assets/website/IMG_20260203_172255.png";
+import des1 from "../assets/website/computer-program-coding-screen.jpg";
+import des2 from "../assets/website/StockCake-Tech_Team_Working-762339-medium.jpg";
+import des3 from "../assets/website/people-working-with-devices-office.jpg";
+import des4 from "../assets/website/young-employees-sitting-office-table-using-laptop-team-work-brainstorming-meeting-concept.jpg";
+import csi from "../assets/website/CSI-logo-removedBG.png";
 
 const targetDate = new Date("2026-02-15T00:00:00").getTime();
 const steps = [
@@ -323,7 +322,6 @@ const Home = () => {
 
         <div className="flex flex-row gap-4">
           <img src={csi} alt="csi" className="w-[200px] lg:w-[300px]" />
-          <img src={code} alt="code" className="w-[200px] lg:w-[300px]" />
         </div>
       </div>
     </div>

@@ -1,6 +1,6 @@
 import React from "react";
-import logo from "../assets/InShot_20260204_142320853.png";
-import prize from "../assets/InShot_20260204_145801391.png";
+import logo from "../assets/website/InShot_20260204_142320853.png";
+import prize from "../assets/website/InShot_20260204_145801391.png";
 
 const Prizes = () => {
   return (

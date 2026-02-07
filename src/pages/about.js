@@ -1,9 +1,9 @@
 import React from "react";
-import hack from "../assets/InShot_20260204_144524301.png";
+import hack from "../assets/website/InShot_20260204_144524301.png";
 
 const About = () => {
   return (
-    <section className="bg-black text-white px-4 py-8 lg:px-10">
+    <section className="bg-black text-white px-4 py-10 min-h-screen flex flex-col">
       <div className="max-w-5xl mx-auto flex flex-col items-center gap-6">
         <img src={hack} alt="hack" className="w-full max-w-3xl rounded-lg" />
 
@@ -56,23 +56,6 @@ const About = () => {
           towards the advancement of technology by organizing various events,
           workshops, and conferences. It also provides a platform for students
           to learn and grow in the field of computer science.
-        </p>
-      </div>
-
-      <div className="max-w-6xl mx-auto mt-12">
-        <h2 className="text-2xl font-bold text-center lg:text-4xl mb-4">
-          ABOUT CodeVirus Security
-        </h2>
-
-        <hr className="border-gray-400 mb-8" />
-
-        <p className="text-sm text-center lg:text-base lg:text-left">
-          CodeVirus Security is a leading organization that specializes in
-          providing cybersecurity solutions to businesses and individuals. It
-          offers a range of services, including penetration testing, malware
-          analysis, and risk assessment. The organization also provides training
-          and awareness programs to its clients to help them stay protected
-          against cyber threats.
         </p>
       </div>
     </section>

@@ -1,5 +1,5 @@
 import React from "react";
-import rules from "../assets/toppng.com-rules-and-regulations-1235x758.png";
+import rules from "../assets/website/toppng.com-rules-and-regulations-1235x758.png";
 
 const Rules = () => {
   return (
