@@ -89,7 +89,7 @@ const Home = () => {
 
         <div className="flex flex-col justify-center items-center h-full gap-2 text-center overflow-x-hidden">
           <h1 className="flex flex-col sm:flex-row justify-center items-center gap-4 text-5xl sm:text-6xl lg:text-8xl font-bold text-outline-2">
-            YUKTI <span className="text-white break-words">1.0</span>
+            YUKTI <span className="text-white overflow-hidden">1.0</span>
           </h1>
 
           <p className="text-md text-white">

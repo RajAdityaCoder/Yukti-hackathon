@@ -5,7 +5,7 @@ import logo2 from "../assets/website/InShot_20260204_143344831.png";
 const Loading = () => {
   return (
     <div className="fixed inset-0 bg-black flex items-center justify-center z-50 overflow-x-hidden">
-      <div className="relative w-48 h-48 sm:w-56 sm:h-56 lg:w-80 lg:h-80">
+      <div className="relative w-40 h-40 sm:w-60 sm:h-60 lg:w-80 lg:h-80">
         <img
           src={logo}
           alt="Loading"
