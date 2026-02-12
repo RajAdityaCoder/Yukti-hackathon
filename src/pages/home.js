@@ -96,12 +96,14 @@ const Home = () => {
             Just Make it Working Then Make it Prefect
           </p>
 
-          <p className="text-xl sm:text-2xl text-white">
+          <p className="text-xl sm:text-2xl text-white font-bold">
             February 16, 2026 - February 17, 2026
           </p>
 
           <p className="text-lg text-white sm:w-full text-center">
-            Join us for THREE ROUNDS TWO DAYS of coding, collaboration, and fun!
+            Join us <span className="font-bold">3 Rounds</span> for{" "}
+            <span className="font-bold">2 Days</span> of coding, collaboration,
+            and fun!
           </p>
 
           <p className="text-lg text-white">
@@ -203,9 +205,11 @@ const Home = () => {
               />
             )}
 
-            <p className="flex flex-col text-2xl text-center text-white">
+            <p className="flex flex-col text-2xl text-center text-white font-bold">
               {index + 1}. {steps[index].title}
-              <span className="text-lg text-white">{steps[index].desc}</span>
+              <span className="text-lg font-normal text-white">
+                {steps[index].desc}
+              </span>
             </p>
 
             {index % 2 !== 0 && (
