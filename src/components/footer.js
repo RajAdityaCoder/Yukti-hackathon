@@ -12,6 +12,7 @@ import kartikey from "../assets/teams/Kartikey.jpg";
 import raj from "../assets/teams/Raj.jpg";
 import adi from "../assets/teams/Adi.jpeg";
 import shariq from "../assets/teams/shariq.jpeg";
+import adiS from "../assets/teams/adiS.jpeg";
 
 const Footer = () => {
   const volunteerImages = [
@@ -21,6 +22,7 @@ const Footer = () => {
     shariq,
     hardik,
     akarshit,
+    adiS,
     anu,
     diksha,
     sakshiM,
@@ -48,7 +50,7 @@ const Footer = () => {
           <p className="font-bold text-md">Our Team Volunteers</p>
 
           <div className="grid grid-cols-5 gap-3">
-            {Array(14)
+            {Array(15)
               .fill(0)
               .map((_, i) => (
                 <img

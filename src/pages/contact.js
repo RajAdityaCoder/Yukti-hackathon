@@ -13,6 +13,7 @@ import kartikey from "../assets/teams/Kartikey.jpg";
 import raj from "../assets/teams/Raj.jpg";
 import adi from "../assets/teams/Adi.jpeg";
 import shariq from "../assets/teams/shariq.jpeg";
+import adiS from "../assets/teams/adiS.jpeg";
 
 const volunteerImages = [
   adi,
@@ -21,6 +22,7 @@ const volunteerImages = [
   shariq,
   hardik,
   akarshit,
+  adiS,
   anu,
   diksha,
   sakshiM,
@@ -65,7 +67,15 @@ const Contact = () => {
       instagram:
         "https://www.instagram.com/awkwardlyperfect756?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
     },
-    { name: "Akarshit Singh", phone: "+91-7081169191" },
+    {
+      name: "Akarshit Singh",
+      phone: "+91-7081169191",
+      linkedin:
+        "https://www.linkedin.com/in/akarshit-singh-025212387?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+      instagram:
+        "https://www.instagram.com/___akarshit_________?igsh=MXNxaHFpdXdvZmlsaQ==",
+    },
+    { name: "Aditya Singh", phone: "+91-9125894394" },
     {
       name: "Anu Tiwari",
       linkedin:
