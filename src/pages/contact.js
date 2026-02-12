@@ -12,12 +12,13 @@ import sakshiP from "../assets/teams/SakshiP.jpg";
 import kartikey from "../assets/teams/Kartikey.jpg";
 import raj from "../assets/teams/Raj.jpg";
 import adi from "../assets/teams/Adi.jpeg";
+import shariq from "../assets/teams/shariq.jpeg";
 
 const volunteerImages = [
   adi,
   adarsh,
   raj,
-  "",
+  shariq,
   hardik,
   akarshit,
   anu,
@@ -50,7 +51,14 @@ const Contact = () => {
       instagram:
         "https://www.instagram.com/raj_upadhyay_2206?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
     },
-    { name: "Md. Shariq Irshad", phone: "+91-8299762329" },
+    {
+      name: "Md. Shariq Irshad",
+      phone: "+91-8299762329",
+      linkedin:
+        "https://www.linkedin.com/in/mohd-shariq-irshad-972828383?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      instagram:
+        "https://www.instagram.com/pablopeanutbar?igsh=NjQzdjJpaGR5YzJw",
+    },
     {
       name: "Hardik Gupta",
       phone: "+91-8765126049",

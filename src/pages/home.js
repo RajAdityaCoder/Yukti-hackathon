@@ -275,8 +275,7 @@ const Home = () => {
 
         <p className="text-2xl text-center text-white w-3/4">
           Judges are experienced industry professionals who have a deep
-          understanding of the technologies and industry trends.{" "}
-          <span className="block text-lg">(MNNIT and IIT experts)</span>
+          understanding of the technologies and industry trends.
         </p>
       </div>
 

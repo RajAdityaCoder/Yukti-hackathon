@@ -11,13 +11,14 @@ import sakshiP from "../assets/teams/SakshiP.jpg";
 import kartikey from "../assets/teams/Kartikey.jpg";
 import raj from "../assets/teams/Raj.jpg";
 import adi from "../assets/teams/Adi.jpeg";
+import shariq from "../assets/teams/shariq.jpeg";
 
 const Footer = () => {
   const volunteerImages = [
     adi,
     adarsh,
     raj,
-    "",
+    shariq,
     hardik,
     akarshit,
     anu,
@@ -33,9 +34,9 @@ const Footer = () => {
     <footer className="bg-gray-900 text-white px-4 py-6 lg:px-10 lg:py-8">
       <div className="flex flex-col gap-6 lg:flex-row lg:justify-between lg:items-center max-w-7xl mx-auto">
         <p className="text-sm text-center lg:text-base lg:text-left">
-          For more information, please visit our{" "}
-          <a href="/about" className="text-blue-400 hover:underline">
-            About
+          For more information, please visit{" "}
+          <a href="/rules" className="text-blue-400 hover:underline">
+            Rules and Policies
           </a>{" "}
           or{" "}
           <a href="/contact" className="text-blue-400 hover:underline">
