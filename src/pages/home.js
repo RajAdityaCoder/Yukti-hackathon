@@ -87,8 +87,8 @@ const Home = () => {
       <div className="flex flex-col lg:flex-row items-center justify-center">
         <img src={tech1} alt="tech" className="sm:w-80 sm:h-auto" />
 
-        <div className="flex flex-col justify-center items-center h-full gap-2 text-center overflow-x-hidden">
-          <h1 className="flex flex-col sm:flex-row justify-center items-center gap-4 text-5xl sm:text-6xl lg:text-8xl font-bold text-outline-2">
+        <div className="flex flex-col justify-center items-center min-h-screen gap-2 text-center overflow-hidden px-4">
+          <h1 className="flex flex-col sm:flex-row justify-center items-center gap-4 text-5xl sm:text-6xl lg:text-8xl font-bold text-outline-2 break-words">
             YUKTI <span className="text-white">1.0</span>
           </h1>
 
