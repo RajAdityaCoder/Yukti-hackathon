@@ -13,6 +13,7 @@ import raj from "../assets/teams/Raj.jpg";
 import adi from "../assets/teams/Adi.jpeg";
 import shariq from "../assets/teams/shariq.jpeg";
 import adiS from "../assets/teams/adiS.jpeg";
+import yash from "../assets/teams/Yash.jpeg";
 
 const Footer = () => {
   const volunteerImages = [
@@ -28,7 +29,7 @@ const Footer = () => {
     sakshiM,
     sakshiP,
     kartikey,
-    "",
+    yash,
     aman,
     shubham,
   ];

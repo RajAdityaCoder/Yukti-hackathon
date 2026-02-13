@@ -14,6 +14,7 @@ import raj from "../assets/teams/Raj.jpg";
 import adi from "../assets/teams/Adi.jpeg";
 import shariq from "../assets/teams/shariq.jpeg";
 import adiS from "../assets/teams/adiS.jpeg";
+import yash from "../assets/teams/Yash.jpeg";
 
 const volunteerImages = [
   adi,
@@ -28,7 +29,7 @@ const volunteerImages = [
   sakshiM,
   sakshiP,
   kartikey,
-  "",
+  yash,
   aman,
   shubham,
 ];
@@ -75,7 +76,11 @@ const Contact = () => {
       instagram:
         "https://www.instagram.com/___akarshit_________?igsh=MXNxaHFpdXdvZmlsaQ==",
     },
-    { name: "Aditya Singh", phone: "+91-9125894394" },
+    {
+      name: "Aditya Singh",
+      phone: "+91-9125894394",
+      instagram: "https://www.instagram.com/adityasingh19._/",
+    },
     {
       name: "Anu Tiwari",
       linkedin:
