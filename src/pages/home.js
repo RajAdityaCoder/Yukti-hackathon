@@ -92,7 +92,7 @@ const Home = () => {
         />
 
         <div className="flex flex-col justify-center items-center h-full gap-2 text-center overflow-x-hidden">
-          <h1 className="flex flex-col sm:flex-row justify-center items-center gap-4 text-5xl sm:text-6xl lg:text-8xl font-bold text-outline-2">
+          <h1 className="flex flex-col sm:flex-row justify-center items-center gap-4 text-5xl sm:text-6xl lg:text-8xl font-bold text-outline-2 overflow-hidden">
             YUKTI <span className="text-white overflow-hidden">1.0</span>
           </h1>
 
@@ -138,47 +138,52 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="flex flex-col items-center font-mono">
-        <span className="text-white lg:text-2xl sm:text-base mb-4">
-          Registration Closes In
-        </span>
-
-        <div className="flex gap-3 flex-wrap max-w-full">
-          <div className="flex flex-col items-center">
-            <span className="text-outline-1 px-4 py-2 rounded-md lg:text-9xl sm:text-5xl">
-              {timeLeft.days}
+      {timeLeft.days &&
+        timeLeft.hours &&
+        timeLeft.minutes &&
+        timeLeft.seconds > 0 && (
+          <div className="flex flex-col items-center font-mono">
+            <span className="text-white lg:text-2xl sm:text-base mb-4">
+              Registration Closes In
             </span>
-            <span className="text-sm mt-1 text-white">Days</span>
+
+            <div className="flex gap-3 flex-wrap max-w-full">
+              <div className="flex flex-col items-center">
+                <span className="text-outline-1 px-4 py-2 rounded-md lg:text-9xl sm:text-5xl">
+                  {timeLeft.days}
+                </span>
+                <span className="text-sm mt-1 text-white">Days</span>
+              </div>
+
+              <span className="lg:text-9xl text-outline-1 sm:text-5xl">:</span>
+
+              <div className="flex flex-col items-center">
+                <span className="text-outline-1 px-4 py-2 rounded-md lg:text-9xl sm:text-5xl">
+                  {timeLeft.hours}
+                </span>
+                <span className="text-sm mt-1 text-white">Hours</span>
+              </div>
+
+              <span className="lg:text-9xl text-outline-1 sm:text-5xl">:</span>
+
+              <div className="flex flex-col items-center">
+                <span className="text-outline-1 px-4 py-2 rounded-md lg:text-9xl sm:text-5xl">
+                  {timeLeft.minutes}
+                </span>
+                <span className="text-sm mt-1 text-white">Minutes</span>
+              </div>
+
+              <span className="lg:text-9xl text-outline-1 sm:text-5xl">:</span>
+
+              <div className="flex flex-col items-center">
+                <span className="text-outline-1 px-4 py-2 rounded-md lg:text-9xl sm:text-5xl">
+                  {timeLeft.seconds}
+                </span>
+                <span className="text-sm mt-1 text-white">Seconds</span>
+              </div>
+            </div>
           </div>
-
-          <span className="lg:text-9xl text-outline-1 sm:text-5xl">:</span>
-
-          <div className="flex flex-col items-center">
-            <span className="text-outline-1 px-4 py-2 rounded-md lg:text-9xl sm:text-5xl">
-              {timeLeft.hours}
-            </span>
-            <span className="text-sm mt-1 text-white">Hours</span>
-          </div>
-
-          <span className="lg:text-9xl text-outline-1 sm:text-5xl">:</span>
-
-          <div className="flex flex-col items-center">
-            <span className="text-outline-1 px-4 py-2 rounded-md lg:text-9xl sm:text-5xl">
-              {timeLeft.minutes}
-            </span>
-            <span className="text-sm mt-1 text-white">Minutes</span>
-          </div>
-
-          <span className="lg:text-9xl text-outline-1 sm:text-5xl">:</span>
-
-          <div className="flex flex-col items-center">
-            <span className="text-outline-1 px-4 py-2 rounded-md lg:text-9xl sm:text-5xl">
-              {timeLeft.seconds}
-            </span>
-            <span className="text-sm mt-1 text-white">Seconds</span>
-          </div>
-        </div>
-      </div>
+        )}
 
       <div className="flex flex-col justify-center items-center bg-gray-900 w-full gap-4 p-10">
         <h2 className="text-4xl font-bold text-center text-[#8c52ff]">

@@ -3,7 +3,44 @@ import logo from "../assets/website/InShot_20260204_142320853.png";
 import prize from "../assets/website/InShot_20260204_145801391.png";
 
 const Prizes = () => {
-  const shortlistedTeams = [];
+  const shortlistedTeams = [
+    { name: "Tech Titans" },
+    { name: "Sentinal" },
+    { name: "npm install win" },
+    { name: "Debugger Squad" },
+    { name: "AdaptiveCoders" },
+    { name: "Arise" },
+    { name: "Knight Devs" },
+    { name: "Logic Lords" },
+    { name: "Technovators" },
+    { name: "Pixel Pair" },
+    { name: "Legal Eagle" },
+    { name: "EduAI Innovators" },
+    { name: "Revive & Thrive" },
+    { name: "The Falcons" },
+    { name: "Ton-18" },
+    { name: "HealTech" },
+    { name: "Innovation 404" },
+    { name: "Team titans" },
+    { name: "Cyber Trios" },
+    { name: "Bits n Bytes" },
+    { name: "Automation krew" },
+    { name: "The Civic Visionaries" },
+    { name: "GyanSetu" },
+    { name: "Ignipotent" },
+    { name: "API Avengers" },
+    { name: "Team Heisyn" },
+    { name: "AegisMind" },
+    { name: "Stack Overflowed" },
+    { name: "Purva-Drishti" },
+    { name: "Stranger Codes" },
+    { name: "Bizarre" },
+    { name: "BrainBusters" },
+    { name: "Explicit Devisors" },
+    { name: "HackSquad" },
+    { name: "KryGen" },
+    { name: "The Knight Walkers" },
+  ];
 
   return (
     <div className="flex flex-col items-center justify-center bg-black w-full gap-4 px-4 relative overflow-hidden">
@@ -67,7 +104,11 @@ const Prizes = () => {
             </span>
 
             <p className="text-white/80 text-center font-semibold text-xl sm:text-2xl lg:text-4xl">
-              The shortlisted teams for the hackathon are:
+              The{" "}
+              <span className="text-[#8c52ff] font-bold">
+                shortlisted teams
+              </span>{" "}
+              for the hackathon are:
             </p>
 
             <div className="w-full max-w-5xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -83,10 +124,17 @@ const Prizes = () => {
                       #{team.rank}
                     </span>
                   )}
-
                   <span className="relative z-10">{team.name}</span>
                 </div>
               ))}
+            </div>
+            <div className="text-white/70 text-lg text-center mt-8">
+              Shortlisted teams must bring their{" "}
+              <span className="font-bold">
+                ID proof , Laptop and the Charging station ( if possible bring
+                your own extension board also )
+              </span>{" "}
+              to the hackathon.
             </div>
           </div>
         )}
