@@ -250,9 +250,9 @@ const Home = () => {
             <ul className="text-white space-y-2 text-sm lg:text-base">
               <li>🕙 10:00 AM – Welcome of Guests & Participants</li>
               <li>🪔 10:05 AM – Inauguration & Saraswati Vandana</li>
-              <li>🎤 10:10 AM – Address by Director</li>
-              <li>🎓 10:15 AM – Address by Dean (R&amp;D)</li>
-              <li>🎓 10:25 AM – Address by Dean (Academics)</li>
+              <li>🎤 10:10 AM – Address by Director Sir</li>
+              <li>🎓 10:15 AM – Address by Dean (R&amp;D) Sir</li>
+              <li>🎓 10:25 AM – Address by Dean (Academics) Sir</li>
               <li>📋 10:30 AM – Hackathon Briefing (Rules)</li>
               <li>🚶 10:45 AM – Move to Venue</li>
               <li>💻 11:00 AM – 02:00 PM – Problem Case Statements</li>
