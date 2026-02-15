@@ -14,10 +14,12 @@ const Navbar = () => {
 
         <nav className="hidden lg:flex space-x-8">
           <NavLink to="/">Home</NavLink>
-          <NavLink to="/prizes">Prizes</NavLink>
+          <NavLink to="/prizes" className="text-[#8c52ff] font-semibold">
+            Prizes & Results
+          </NavLink>
           <NavLink to="/rules">Rules & Policies</NavLink>
           <NavLink to="/about">About</NavLink>
-          <NavLink to="/contact">Our Teams</NavLink>
+          <NavLink to="/contact">Team</NavLink>
         </nav>
 
         <button

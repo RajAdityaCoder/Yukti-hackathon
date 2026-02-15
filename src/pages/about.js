@@ -5,7 +5,11 @@ const About = () => {
   return (
     <section className="bg-black text-white px-4 py-10 min-h-screen flex flex-col">
       <div className="max-w-5xl mx-auto flex flex-col items-center gap-6">
-        <img src={hack} alt="hack" className="w-full max-w-3xl rounded-lg" />
+        <img
+          src={hack}
+          alt="hack"
+          className="w-full max-w-3xl rounded-lg drop-shadow-[0_0_30px_rgba(140,82,255,0.4)]"
+        />
 
         <h1 className="text-2xl font-bold text-center lg:text-4xl">
           <span className="text-[#8c52ff]">About</span> YUKTI 1.0

@@ -3,17 +3,21 @@ import logo from "../assets/website/InShot_20260204_142320853.png";
 import prize from "../assets/website/InShot_20260204_145801391.png";
 
 const Prizes = () => {
+  const shortlistedTeams = [];
+
   return (
-    <div className="flex flex-col items-center justify-center bg-black w-full gap-4 px-4">
-      <div className="flex flex-col items-center gap-6 mb-32 w-full">
+    <div className="flex flex-col items-center justify-center bg-black w-full gap-4 px-4 relative overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(140,82,255,0.15),transparent_60%)] pointer-events-none" />
+
+      <div className="flex flex-col items-center gap-6 mb-32 w-full relative z-10">
         <img
           src={logo}
           alt="logo"
           className="w-64 lg:w-[500px] h-auto drop-shadow-[0_0_30px_rgba(140,82,255,0.4)]"
         />
 
-        <h1 className="font-bold text-3xl text-white tracking-wide">
-          🏆 Prizes
+        <h1 className="font-bold text-3xl text-[#8c52ff] tracking-wide">
+          🏆 Prizes & <span className="text-white font-bold">Results</span>
         </h1>
 
         <hr className="w-1/2 border-t-2 border-white/30" />
@@ -23,7 +27,6 @@ const Prizes = () => {
           criteria.
         </p>
 
-        {/* Prize Image */}
         <img
           src={prize}
           alt="Prizes"
@@ -56,6 +59,37 @@ const Prizes = () => {
         <p className="text-white/70 text-lg text-center mt-8">
           All other participants will receive a certificate of participation.
         </p>
+
+        {shortlistedTeams.length > 0 && (
+          <div className="flex flex-col items-center gap-6 mt-12 px-4 w-full overflow-x-hidden">
+            <span className="bg-[#8c52ff]/20 text-[#8c52ff] px-3 py-1 rounded-full text-sm tracking-wide">
+              Official Announcement
+            </span>
+
+            <p className="text-white/80 text-center font-semibold text-xl sm:text-2xl lg:text-4xl">
+              The shortlisted teams for the hackathon are:
+            </p>
+
+            <div className="w-full max-w-5xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {shortlistedTeams.map((team, index) => (
+                <div
+                  key={index}
+                  className="relative overflow-hidden bg-gradient-to-r from-gray-900 to-gray-800 border border-gray-800 rounded-xl px-5 py-4 text-center text-white text-base sm:text-lg transition-all duration-300 hover:border-[#8c52ff] hover:shadow-[0_0_20px_rgba(140,82,255,0.35)]"
+                >
+                  <span className="absolute inset-0 opacity-0 hover:opacity-100 transition bg-gradient-to-r from-transparent via-[#8c52ff]/20 to-transparent" />
+
+                  {team.rank && (
+                    <span className="absolute top-2 right-2 text-xs bg-white/10 px-2 py-1 rounded-md">
+                      #{team.rank}
+                    </span>
+                  )}
+
+                  <span className="relative z-10">{team.name}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

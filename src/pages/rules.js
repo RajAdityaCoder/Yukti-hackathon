@@ -8,7 +8,7 @@ const Rules = () => {
         <img
           src={rules}
           alt="YUKTI 1.0 Rules"
-          className="w-72 lg:w-96 h-auto"
+          className="w-72 lg:w-96 h-auto drop-shadow-[0_0_30px_rgba(140,82,255,0.4)]"
         />
 
         <h2 className="text-3xl lg:text-4xl font-bold text-center text-white">

@@ -140,7 +140,7 @@ const Contact = () => {
         </p>
       </div>
 
-      <div className="max-w-6xl mx-auto mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="max-w-6xl mx-auto mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 ">
         {contacts.map((person, index) => (
           <ContactCard
             key={index}
@@ -159,7 +159,7 @@ const Contact = () => {
 const ContactCard = ({ name, phone, index, linkedin, instagram }) => (
   <div className="bg-gray-900 p-4 rounded-lg flex items-center gap-4">
     <img
-      className="w-20 h-20 rounded-full object-cover object-top lg:w-24 lg:h-24"
+      className="w-20 h-20 rounded-full object-cover object-top lg:w-24 lg:h-24 drop-shadow-[0_0_30px_rgba(140,82,255,0.4)]"
       src={volunteerImages[index % volunteerImages.length]}
       alt={name}
     />
