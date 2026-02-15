@@ -12,7 +12,7 @@ const Navbar = () => {
           <img src={yukti} alt="yukti" className="w-24 lg:w-32" />
         </Link>
 
-        <nav className="hidden lg:flex space-x-8">
+        <nav className="hidden lg:flex space-x-8 overflow-hidden">
           <NavLink to="/">Home</NavLink>
           <NavLink to="/prizes">Prizes & Results</NavLink>
           <NavLink to="/rules">Rules & Policies</NavLink>

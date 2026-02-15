@@ -72,7 +72,7 @@ const Prizes = () => {
                      hover:scale-105 transition-all duration-500"
         />
 
-        <div className="flex flex-col lg:flex-row justify-between items-center w-full max-w-3xl gap-6 mt-6 overflow-x-auto">
+        <div className="flex flex-col lg:flex-row justify-between items-center w-full max-w-3xl gap-6 mt-6 overflow-hidden">
           {[
             { title: "🥇 First Place", amount: "₹10,000" },
             { title: "🥈 Second Place", amount: "₹5,000" },
