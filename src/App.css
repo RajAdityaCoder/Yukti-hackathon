@@ -9,6 +9,16 @@
     overflow-x: hidden;
 }
 
+body {
+    caret-color: transparent;
+}
+
+input,
+textarea,
+[contenteditable="true"] {
+    caret-color: auto;
+}
+
 @media (max-width: 768px) {
     font-size: 50px;
 }

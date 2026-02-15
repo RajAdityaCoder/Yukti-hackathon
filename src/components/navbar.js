@@ -17,7 +17,7 @@ const Navbar = () => {
           <NavLink to="/prizes">Prizes & Results</NavLink>
           <NavLink to="/rules">Rules & Policies</NavLink>
           <NavLink to="/about">About</NavLink>
-          <NavLink to="/contact">Team</NavLink>
+          <NavLink to="/contact">Our Teams</NavLink>
         </nav>
 
         <button
@@ -43,7 +43,7 @@ const Navbar = () => {
             About
           </MobileLink>
           <MobileLink to="/contact" setOpen={setOpen}>
-            Contact
+            Our Teams
           </MobileLink>
         </div>
       )}
