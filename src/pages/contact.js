@@ -127,20 +127,20 @@ const Contact = () => {
     },
   ];
   return (
-    <section className="bg-black text-white px-4 py-10 min-h-screen flex flex-col">
+    <section className="bg-black text-white px-4 py-12 min-h-screen flex flex-col overflow-x-hidden">
       <div className="max-w-5xl mx-auto text-center">
-        <h1 className="text-2xl font-bold lg:text-4xl">
+        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold">
           <span className="text-[#8c52ff]">WANT TO KNOW </span>MORE?
         </h1>
 
-        <hr className="my-4 border-gray-400" />
+        <hr className="my-4 border-white/20" />
 
-        <p className="text-sm lg:text-base">
+        <p className="text-sm sm:text-base text-white/70">
           We would love to hear from you! Just ask us any questions you have.
         </p>
       </div>
 
-      <div className="max-w-6xl mx-auto mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 ">
+      <div className="max-w-6xl w-full mx-auto mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {contacts.map((person, index) => (
           <ContactCard
             key={index}
@@ -155,45 +155,44 @@ const Contact = () => {
     </section>
   );
 };
-
 const ContactCard = ({ name, phone, index, linkedin, instagram }) => (
-  <div className="bg-gray-900 p-4 rounded-lg flex items-center gap-4">
-    <img
-      className="w-20 h-20 rounded-full object-cover object-top lg:w-24 lg:h-24]"
-      src={volunteerImages[index % volunteerImages.length]}
-      alt={name}
-    />
+  <div className="relative group rounded-2xl p-[1px] bg-gradient-to-br from-white/10 via-white/5 to-transparent">
+    <div className="rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 p-4 flex items-center gap-4 transition-all duration-300 group-hover:border-[#8c52ff]/60 group-hover:shadow-[0_0_25px_rgba(140,82,255,0.35)]">
+      <img
+        src={volunteerImages[index % volunteerImages.length]}
+        alt={name}
+        className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 rounded-full object-cover object-top flex-shrink-0 ring-2 ring-white/10 group-hover:ring-[#8c52ff]/50 transition"
+      />
 
-    <div>
-      <p className="flex items-center gap-2 font-semibold text-white text-lg">
-        {name}
+      <div className="flex flex-col min-w-0">
+        <p className="flex items-center gap-2 font-semibold text-white text-base sm:text-lg truncate">
+          {name}
 
-        {linkedin && (
-          <a
-            href={linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={`${name} LinkedIn`}
-            className="text-blue-400 hover:text-blue-500 transition"
-          >
-            <FaLinkedin className="text-xl" />
-          </a>
-        )}
+          {linkedin && (
+            <a
+              href={linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-400 hover:text-blue-500 transition shrink-0"
+            >
+              <FaLinkedin className="text-lg sm:text-xl" />
+            </a>
+          )}
 
-        {instagram && (
-          <a
-            href={instagram}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={`${name} Instagram`}
-            className="text-pink-400 hover:text-pink-500 transition"
-          >
-            <FaInstagram className="text-xl" />
-          </a>
-        )}
-      </p>
+          {instagram && (
+            <a
+              href={instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-pink-400 hover:text-pink-500 transition shrink-0"
+            >
+              <FaInstagram className="text-lg sm:text-xl" />
+            </a>
+          )}
+        </p>
 
-      <p className="text-sm text-gray-300">{phone}</p>
+        <p className="text-xs sm:text-sm text-white/60 truncate">{phone}</p>
+      </div>
     </div>
   </div>
 );
