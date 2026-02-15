@@ -14,9 +14,7 @@ const Navbar = () => {
 
         <nav className="hidden lg:flex space-x-8">
           <NavLink to="/">Home</NavLink>
-          <NavLink to="/prizes" className="text-[#8c52ff] font-semibold">
-            Prizes & Results
-          </NavLink>
+          <NavLink to="/prizes">Prizes & Results</NavLink>
           <NavLink to="/rules">Rules & Policies</NavLink>
           <NavLink to="/about">About</NavLink>
           <NavLink to="/contact">Team</NavLink>
@@ -36,7 +34,7 @@ const Navbar = () => {
             Home
           </MobileLink>
           <MobileLink to="/prizes" setOpen={setOpen}>
-            Prizes
+            Prizes & Results
           </MobileLink>
           <MobileLink to="/rules" setOpen={setOpen}>
             Rules & Policies
