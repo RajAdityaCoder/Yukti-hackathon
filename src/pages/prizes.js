@@ -16,7 +16,7 @@ const Prizes = () => {
     { name: "Bits n Bytes" },
     { name: "Debugger Squad" },
     { name: "Bizarre" },
-    { name: "Team titans" },
+    { name: "Tech titans" },
     { name: "HackSquad" },
     { name: "Legal Eagle" },
     { name: "The Knight Walkers" },
@@ -103,7 +103,7 @@ const Prizes = () => {
               </p>
 
               <div className="w-full max-w-5xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                {shortlistedTeams.slice(0, 19).map((team, index) => (
+                {shortlistedTeams.slice(0, 20).map((team, index) => (
                   <div
                     key={index}
                     className="relative overflow-hidden bg-gradient-to-r from-gray-900 to-gray-800 border border-gray-800 rounded-xl px-5 py-4 text-center text-white text-base sm:text-lg transition-all duration-300 hover:border-[#8c52ff] hover:shadow-[0_0_20px_rgba(140,82,255,0.35)]"
@@ -133,7 +133,7 @@ const Prizes = () => {
 
             <br />
             <br />
-            {shortlistedTeams.length > 19 && (
+            {shortlistedTeams.length > 20 && (
               <div className="flex flex-col items-center gap-6 w-full">
                 <p className="text-white/80 text-center font-semibold text-xl sm:text-2xl lg:text-4xl">
                   The{" "}
@@ -143,7 +143,7 @@ const Prizes = () => {
                 </p>
 
                 <div className="w-full max-w-5xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                  {shortlistedTeams.slice(19).map((team, index) => (
+                  {shortlistedTeams.slice(20).map((team, index) => (
                     <div
                       key={index}
                       className="relative overflow-hidden bg-gradient-to-r from-gray-900 to-gray-800 border border-gray-800 rounded-xl px-5 py-4 text-center text-white text-base sm:text-lg transition-all duration-300 hover:border-[#8c52ff] hover:shadow-[0_0_20px_rgba(140,82,255,0.35)]"
