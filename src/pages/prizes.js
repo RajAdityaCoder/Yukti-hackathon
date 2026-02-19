@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "../assets/website/InShot_20260204_142320853.png";
-import prize from "../assets/website/InShot_20260204_145801391.png";
+import prize from "../assets/website/Winners.jpeg";
 
 const Prizes = () => {
   const shortlistedTeams = [
@@ -16,10 +16,7 @@ const Prizes = () => {
     { name: "Bits n Bytes" },
     { name: "Debugger Squad" },
     { name: "Bizarre" },
-    { name: "Tech titans" },
-    { name: "HackSquad" },
     { name: "Legal Eagle" },
-    { name: "The Knight Walkers" },
     { name: "Ton-18" },
     { name: "Arise" },
     { name: "Technovators" },
@@ -63,15 +60,19 @@ const Prizes = () => {
         <img
           src={prize}
           alt="Prizes"
-          className="w-full max-w-md lg:max-w-xl h-auto rounded-xl
+          className="w-full max-w-md lg:max-w-xl rounded-t-full 
                      shadow-[0_0_40px_rgba(140,82,255,0.25)]
-                     hover:scale-105 transition-all duration-500"
+                     hover:scale-105 transition-all duration-500 object-cover h-[350px] object-top"
         />
         <div className="flex flex-col lg:flex-row justify-between items-center w-full max-w-3xl gap-6 mt-6 overflow-x-hidden">
           {[
-            { title: "🥇 First Place", amount: "₹10,000" },
-            { title: "🥈 Second Place", amount: "₹5,000" },
-            { title: "🥉 Third Place", amount: "₹2,100" },
+            { title: "🥇 First Place", name: "HackSquad", amount: "₹10,000" },
+            { title: "🥈 Second Place", name: "Tech titans", amount: "₹5,000" },
+            {
+              title: "🥉 Third Place",
+              name: "The Knight Walkers",
+              amount: "₹2,100",
+            },
           ].map((item, i) => (
             <div
               key={i}
@@ -80,7 +81,8 @@ const Prizes = () => {
                          hover:border-[#8c52ff] hover:shadow-[0_0_25px_rgba(140,82,255,0.4)]
                          hover:-translate-y-2 transition-all duration-300"
             >
-              <p className="text-white text-xl font-bold">{item.title}</p>
+              <p className="text-white text-sm font-bold">{item.title}</p>
+              <p className="text-white text-2xl font-bold">{item.name}</p>
               <p className="text-[#8c52ff] text-2xl font-extrabold">
                 {item.amount}
               </p>
@@ -92,18 +94,16 @@ const Prizes = () => {
         </p>
         {shortlistedTeams.length > 0 && (
           <div className="flex flex-col items-center gap-10 mt-12 px-4 w-full overflow-x-hidden">
-            <span className="bg-[#8c52ff]/20 text-[#8c52ff] px-3 py-1 rounded-full text-sm tracking-wide">
-              Official Announcement
-            </span>
-
             <div className="flex flex-col items-center gap-6 w-full">
               <p className="text-white/80 text-center font-semibold text-xl sm:text-2xl lg:text-4xl">
-                Teams Shortlisted{" "}
-                <span className="text-[#8c52ff] font-bold">for Round 3</span>
+                Teams That{" "}
+                <span className="text-[#8c52ff] font-bold">
+                  Participated in the Hackathon
+                </span>
               </p>
 
               <div className="w-full max-w-5xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                {shortlistedTeams.slice(0, 20).map((team, index) => (
+                {shortlistedTeams.slice(0, 33).map((team, index) => (
                   <div
                     key={index}
                     className="relative overflow-hidden bg-gradient-to-r from-gray-900 to-gray-800 border border-gray-800 rounded-xl px-5 py-4 text-center text-white text-base sm:text-lg transition-all duration-300 hover:border-[#8c52ff] hover:shadow-[0_0_20px_rgba(140,82,255,0.35)]"
@@ -121,47 +121,11 @@ const Prizes = () => {
                 ))}
               </div>
             </div>
-
-            <div className="text-white/70 text-lg text-center mt-4 max-w-2xl">
-              Shortlisted teams must bring their{" "}
-              <span className="font-bold">
-                ID proof, Laptop and Charging station (if possible bring your
-                own extension board)
-              </span>{" "}
-              to the hackathon.
-            </div>
-
-            <br />
-            <br />
-            {shortlistedTeams.length > 20 && (
-              <div className="flex flex-col items-center gap-6 w-full">
-                <p className="text-white/80 text-center font-semibold text-xl sm:text-2xl lg:text-4xl">
-                  The{" "}
-                  <span className="text-[#8c52ff] font-bold">
-                    Participants Teams
-                  </span>
-                </p>
-
-                <div className="w-full max-w-5xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                  {shortlistedTeams.slice(20).map((team, index) => (
-                    <div
-                      key={index}
-                      className="relative overflow-hidden bg-gradient-to-r from-gray-900 to-gray-800 border border-gray-800 rounded-xl px-5 py-4 text-center text-white text-base sm:text-lg transition-all duration-300 hover:border-[#8c52ff] hover:shadow-[0_0_20px_rgba(140,82,255,0.35)]"
-                    >
-                      <span className="absolute inset-0 opacity-0 hover:opacity-100 transition bg-gradient-to-r from-transparent via-[#8c52ff]/20 to-transparent" />
-
-                      {team.rank && (
-                        <span className="absolute top-2 right-2 text-xs bg-white/10 px-2 py-1 rounded-md">
-                          #{team.rank}
-                        </span>
-                      )}
-
-                      <span className="relative z-10">{team.name}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
+            <p className="text-white/70 text-2xl text-center mt-8">
+              Wait for the{" "}
+              <span className="text-[#8c52ff] font-bold">Next Hackathon</span>{" "}
+              for more exciting prizes!
+            </p>
           </div>
         )}
         ;
